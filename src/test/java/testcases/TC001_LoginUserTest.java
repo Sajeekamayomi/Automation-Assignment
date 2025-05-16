@@ -13,6 +13,7 @@ import pages.LandingPage;
 import pages.LoginPage;
 import pages.LogoutPage;
 import pages.SessionHandlingPage;
+import utility.PropertyFileReader;
 
 import java.time.Duration;
 
@@ -22,11 +23,15 @@ import java.time.Duration;
 
 public class TC001_LoginUserTest extends BaseClass {
 
+    PropertyFileReader propertyFileReader = new PropertyFileReader();
+    String username = propertyFileReader.getProperty("testData","username");
+    String password = propertyFileReader.getProperty("testData","password");
+
 
     @Test
     public void LoginUserTest() {
         CommonFunctions commonFunctions = new CommonFunctions(driver);
-        commonFunctions.login("johnd@eurokool.com", "Abcd1234");
+        commonFunctions.login(username, password);
         commonFunctions.handlingSession();
         commonFunctions.verifyLoginSuccess();
         commonFunctions.logout();

@@ -4,19 +4,13 @@
 
 <suite name="QA_Reg_ModuleA_Plan1">
 
-    <test name="TC001_LoginTest_chrome">
-        <parameter name="browser" value="chrome"/>
+    <test name="TC001_LoginTest">
         <classes>
             <class name="testcases.TC001_LoginUserTest"/>
         </classes>
     </test>
 
-    <test name="TC001_LoginTest_Firefox">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="testcases.TC001_LoginUserTest"/>
-        </classes>
-    </test>
+
 
 
 </suite>
