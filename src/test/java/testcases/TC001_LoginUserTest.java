@@ -3,6 +3,8 @@ package testcases;
 
 import base.BaseClass;
 import functions.CommonFunctions;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -23,18 +25,29 @@ import java.time.Duration;
 
 public class TC001_LoginUserTest extends BaseClass {
 
+    private static final Logger logger = LogManager.getLogger(TC001_LoginUserTest.class);
+
+    //Data retrieve from property file
     PropertyFileReader propertyFileReader = new PropertyFileReader();
     String username = propertyFileReader.getProperty("testData","username");
     String password = propertyFileReader.getProperty("testData","password");
 
 
     @Test
+
+
     public void LoginUserTest() {
+
+
+        logger.info("---------Starting TC001----------");
+
         CommonFunctions commonFunctions = new CommonFunctions(driver);
         commonFunctions.login(username, password);
         commonFunctions.handlingSession();
         commonFunctions.verifyLoginSuccess();
         commonFunctions.logout();
+
+        logger.info("----------Ending TC001----------");
 
     }
 

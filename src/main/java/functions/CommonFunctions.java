@@ -1,6 +1,9 @@
 package functions;
 
 
+import base.BaseClass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.LandingPage;
@@ -13,6 +16,8 @@ import pages.SessionHandlingPage;
  */
 
 public class CommonFunctions {
+
+    private static final Logger logger = LogManager.getLogger(CommonFunctions.class);
 
     WebDriver driver;
 
@@ -32,7 +37,9 @@ public class CommonFunctions {
         sessionHandlingPage.handleSessionIfPresent();
     }
 
+
     public void verifyLoginSuccess() {
+        logger.info("Verify Login Success");
         LandingPage landingpage = new LandingPage(driver);
         String actualSubTitle = landingpage.loginSuccess();
         Assert.assertTrue(actualSubTitle.contains("Knowledge Management System"), "Login Failed");
