@@ -2,6 +2,7 @@ package testcases;
 
 
 import base.BaseClass;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import functions.CommonFunctions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -10,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.LandingPage;
 import pages.LoginPage;
@@ -23,6 +25,8 @@ import java.time.Duration;
  * Created by sajeekam on 2/27/2025
  */
 
+
+
 public class TC001_LoginUserTest extends BaseClass {
 
     private static final Logger logger = LogManager.getLogger(TC001_LoginUserTest.class);
@@ -34,17 +38,18 @@ public class TC001_LoginUserTest extends BaseClass {
 
 
     @Test
-
-
     public void LoginUserTest() {
-
 
         logger.info("---------Starting TC001----------");
 
         CommonFunctions commonFunctions = new CommonFunctions(driver);
+        ChainTestListener.embed(takeScreenshot(),"image/png");
         commonFunctions.login(username, password);
+        ChainTestListener.embed(takeScreenshot(),"image/png");
         commonFunctions.handlingSession();
+        ChainTestListener.embed(takeScreenshot(),"image/png");
         commonFunctions.verifyLoginSuccess();
+        ChainTestListener.embed(takeScreenshot(),"image/png");
         commonFunctions.logout();
 
         logger.info("----------Ending TC001----------");

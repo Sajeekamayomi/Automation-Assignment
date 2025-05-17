@@ -1,9 +1,12 @@
 package base;
 
 
+import com.aventstack.chaintest.service.ChainPluginService;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -14,11 +17,8 @@ import org.testng.annotations.BeforeSuite;
 import utility.PropertyFileReader;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
 
 
 /**
@@ -29,16 +29,31 @@ public class BaseClass {
 
     private static final Logger logger = LogManager.getLogger(BaseClass.class);
 
-    public WebDriver driver;
-    public Properties prop;
+    public static WebDriver driver;
 
     //Cleaned the log file
     @BeforeSuite
     public void beforeSuite() {
-        String logFilePath = "logs/automation.log";
-        File logfile = new File(logFilePath);
 
+        //Add More details to the report
+        //Executed pc name
+        ChainPluginService.getInstance().addSystemInfo("Tester", System.getProperty("user.name"));
+        //Executed Browser
+        ChainPluginService.getInstance().addSystemInfo("Browser","chrome");
+
+        //Delete the existing screenshot
         try {
+            String screenshotFolderPath = System.getProperty("user.dir") + "/test-output/chaintest/resources";
+            FileUtils.cleanDirectory(new File(screenshotFolderPath));
+            logger.info("Screenshot Folder Cleaned  : test-output/chaintest");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        //Delete the existing log
+        try {
+            String logFilePath = "logs/automation.log";
+            File logfile = new File(logFilePath);
             if (logfile.exists()) {
                 FileUtils.write(logfile, "", false);
                 logger.info("Log File Cleaned : " + logFilePath);
@@ -59,11 +74,10 @@ public class BaseClass {
         PropertyFileReader propertyFileReader = new PropertyFileReader();
         String browser = propertyFileReader.getProperty("config", "browser");
         String appURL = propertyFileReader.getProperty("config", "App_Url");
-        String implicit_wait = propertyFileReader.getProperty("config", "implicit_wait");
+        long implicit_wait = Long.parseLong(propertyFileReader.getProperty("config", "implicit_wait"));
 
 
         //Cross Browser
-
         switch (browser.toLowerCase()) {
             case "chrome":
                 driver = new ChromeDriver();
@@ -79,10 +93,10 @@ public class BaseClass {
                 return;
         }
 
-        logger.info(("Test case Automating with :" + browser));
+        logger.info(("Test case Automating with : " + browser));
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.parseLong(implicit_wait)));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicit_wait));
         driver.get(appURL);
     }
 
@@ -90,4 +104,13 @@ public class BaseClass {
     public void closeBrowser() {
         driver.quit();
     }
+
+
+    public byte[] takeScreenshot() {
+        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
+        return screenshot;
+
+    }
+
 }

@@ -3,6 +3,10 @@
 
 
 <suite name="QA_Reg_ModuleA_Plan1">
+    
+    <listeners>
+        <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
+    </listeners>
 
     <test name="TC001_LoginTest">
         <classes>

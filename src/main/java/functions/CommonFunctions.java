@@ -2,6 +2,7 @@ package functions;
 
 
 import base.BaseClass;
+import com.aventstack.chaintest.plugins.ChainTestListener;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ import pages.SessionHandlingPage;
  * Created by sajeekam on 5/14/2025
  */
 
-public class CommonFunctions {
+public class CommonFunctions extends BaseClass {
 
     private static final Logger logger = LogManager.getLogger(CommonFunctions.class);
 

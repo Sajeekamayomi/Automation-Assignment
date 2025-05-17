@@ -16,6 +16,8 @@
 
     <dependencies>
 
+
+        <!--Testng -->
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -23,13 +25,22 @@
             <version>7.11.0</version>
         </dependency>
 
+        <!--Selenium -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.29.0</version>
+            <version>4.31.0</version>
         </dependency>
 
+        <!-- SLF4J API 2.x -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.13</version>
+        </dependency>
+
+        <!--Log4j2 Core-->
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -37,6 +48,7 @@
             <version>2.23.1</version>
         </dependency>
 
+        <!--Log4j2-->
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -44,14 +56,16 @@
             <version>2.23.1</version>
         </dependency>
 
+        <!--Log4j2-->
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl - Optional-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
+            <artifactId>log4j-slf4j2-impl</artifactId>
             <version>2.23.1</version>
-            <scope>compile</scope>
         </dependency>
 
+
+        <!-- utility classes - Reading/writing files and streams-->
         <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
@@ -59,10 +73,15 @@
             <version>2.16.1</version>
         </dependency>
 
+        <!--Chain Test Report -->
+        <!-- https://mvnrepository.com/artifact/com.aventstack/chaintest-testng -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>chaintest-testng</artifactId>
+            <version>1.0.9</version>
+        </dependency>
 
     </dependencies>
-
-
 
 
 </project>
