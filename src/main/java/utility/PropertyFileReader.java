@@ -16,6 +16,21 @@ import java.util.Properties;
 public class PropertyFileReader {
 
 
+    //Singleton Design Pattern
+    private static PropertyFileReader object;
+
+    public static PropertyFileReader getInstance() {
+        if (object == null) {
+            object = new PropertyFileReader();
+            System.out.println("Creating New Object");
+            return object;
+        } else {
+            System.out.println("Using Existing Object");
+            return object;
+        }
+    }
+
+
     private Properties getData(String fileName) {
 
         String path = System.getProperty("user.dir") + File.separator + "src" + File.separator +
@@ -23,8 +38,8 @@ public class PropertyFileReader {
 
         File file = new File(path);
 
-        if(!file.exists()){
-            throw  new RuntimeException("Property file not found at :"+path);
+        if (!file.exists()) {
+            throw new RuntimeException("Property file not found at :" + path);
         }
 
         FileInputStream fileInputStream = null;
@@ -32,7 +47,7 @@ public class PropertyFileReader {
         try {
             fileInputStream = new FileInputStream(file);
         } catch (FileNotFoundException e) {
-           e.printStackTrace();
+            e.printStackTrace();
         }
 
         Properties prop = new Properties();
@@ -44,7 +59,7 @@ public class PropertyFileReader {
         return prop;
     }
 
-    public String getProperty (String fileName,String key){
+    public String getProperty(String fileName, String key) {
         return getData(fileName).getProperty(key);
     }
 }

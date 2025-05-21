@@ -29,17 +29,31 @@ public class BaseClass {
 
     private static final Logger logger = LogManager.getLogger(BaseClass.class);
 
-    public static WebDriver driver;
+    //  public static WebDriver driver;
+
+    //Handle Thread Safety in Parallel Execution
+    private static ThreadLocal<WebDriver> webDriverThreadLocal = new ThreadLocal<>();
+
+
+    //Get the Web Driver
+    public static WebDriver getDriver() {
+        if (webDriverThreadLocal.get() == null) {
+            System.out.println("WebDriver is not Initialized");
+            throw new IllegalStateException("WebDriver is not Initialized");
+        }
+
+        return webDriverThreadLocal.get();
+    }
 
     //Cleaned the log file
-    @BeforeSuite
+    @BeforeSuite(groups = {"smoke","regression"})
     public void beforeSuite() {
 
         //Add More details to the report
         //Executed pc name
-        ChainPluginService.getInstance().addSystemInfo("Tester", System.getProperty("user.name"));
+       // ChainPluginService.getInstance().addSystemInfo("Tester", System.getProperty("user.name"));
         //Executed Browser
-        ChainPluginService.getInstance().addSystemInfo("Browser","chrome");
+//        ChainPluginService.getInstance().addSystemInfo("Browser", "chrome");
 
         //Delete the existing screenshot
         try {
@@ -62,31 +76,30 @@ public class BaseClass {
                 logger.info("Log file created " + logFilePath);
             }
         } catch (IOException e) {
-            logger.error("Error cleaning or creatig the log file : " + e.getMessage());
+            logger.error("Error cleaning or creating the log file : " + e.getMessage());
         }
     }
 
     //Open the Web Application
-    @BeforeMethod
+    @BeforeMethod(groups = {"smoke","regression"})
     public void openPage() throws IOException {
 
         //Data retrieve from property file
-        PropertyFileReader propertyFileReader = new PropertyFileReader();
-        String browser = propertyFileReader.getProperty("config", "browser");
-        String appURL = propertyFileReader.getProperty("config", "App_Url");
-        long implicit_wait = Long.parseLong(propertyFileReader.getProperty("config", "implicit_wait"));
-
+        // PropertyFileReader propertyFileReader = new PropertyFileReader();
+        String browser = PropertyFileReader.getInstance().getProperty("config", "browser");
+        String appURL = PropertyFileReader.getInstance().getProperty("config", "App_Url");
+        long implicit_wait = Long.parseLong(PropertyFileReader.getInstance().getProperty("config", "implicit_wait"));
 
         //Cross Browser
         switch (browser.toLowerCase()) {
             case "chrome":
-                driver = new ChromeDriver();
+                webDriverThreadLocal.set(new ChromeDriver());
                 break;
             case "edge":
-                driver = new EdgeDriver();
+                webDriverThreadLocal.set(new EdgeDriver());
                 break;
             case "firefox":
-                driver = new FirefoxDriver();
+                webDriverThreadLocal.set(new FirefoxDriver());
                 break;
             default:
                 System.out.println("Browser Not Supported");
@@ -95,19 +108,20 @@ public class BaseClass {
 
         logger.info(("Test case Automating with : " + browser));
 
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicit_wait));
-        driver.get(appURL);
+        getDriver().manage().window().maximize();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(implicit_wait));
+        getDriver().get(appURL);
     }
 
-    @AfterMethod
+    //Close Browser
+    @AfterMethod(groups = {"smoke","regression"})
     public void closeBrowser() {
-        driver.quit();
+        getDriver().quit();
     }
 
 
     public byte[] takeScreenshot() {
-        TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
+        TakesScreenshot takesScreenshot = (TakesScreenshot)  getDriver();
         byte[] screenshot = takesScreenshot.getScreenshotAs(OutputType.BYTES);
         return screenshot;
 

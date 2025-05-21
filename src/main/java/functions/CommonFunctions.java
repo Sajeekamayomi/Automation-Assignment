@@ -20,35 +20,35 @@ public class CommonFunctions extends BaseClass {
 
     private static final Logger logger = LogManager.getLogger(CommonFunctions.class);
 
-    WebDriver driver;
+    //WebDriver driver;
 
-    public CommonFunctions(WebDriver driver) {
-        this.driver = driver;
-    }
+//    public CommonFunctions(WebDriver driver) {
+//        this.driver = driver;
+//    }
 
     public void login(String userName, String password) {
-        LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage( getDriver());
         loginPage.setUserName(userName);
         loginPage.setPassword(password);
         loginPage.clickLoginButton();
     }
 
     public void handlingSession() {
-        SessionHandlingPage sessionHandlingPage = new SessionHandlingPage(driver);
+        SessionHandlingPage sessionHandlingPage = new SessionHandlingPage( getDriver());
         sessionHandlingPage.handleSessionIfPresent();
     }
 
 
     public void verifyLoginSuccess() {
         logger.info("Verify Login Success");
-        LandingPage landingpage = new LandingPage(driver);
+        LandingPage landingpage = new LandingPage( getDriver());
         String actualSubTitle = landingpage.loginSuccess();
-        Assert.assertTrue(actualSubTitle.contains("Knowledge Management System"), "Login Failed");
+        Assert.assertTrue(actualSubTitle.contains("jjj"), "Login Failed");
     }
 
 
     public void logout() {
-        LogoutPage logoutPage = new LogoutPage(driver);
+        LogoutPage logoutPage = new LogoutPage( getDriver());
         logoutPage.clickLogOutButton();
     }
 }

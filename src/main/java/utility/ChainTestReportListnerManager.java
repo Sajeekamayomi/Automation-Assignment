@@ -3,16 +3,26 @@ package utility;
 
 import base.BaseClass;
 import com.aventstack.chaintest.plugins.ChainTestListener;
+import org.testng.IAnnotationTransformer;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.annotations.ITestAnnotation;
+
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Method;
 
 /**
  * Created by sajeekam on 5/17/2025
  */
 
-public class ChainTestReportListnerManager extends BaseClass implements ITestListener {
+public class ChainTestReportListnerManager extends BaseClass implements ITestListener, IAnnotationTransformer {
 
-   public void onTestStart(ITestResult result){
+    @Override
+    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+        annotation.setRetryAnalyzer(RetryAnalyzer.class);
+    }
+
+    public void onTestStart(ITestResult result){
        ChainTestListener.log("Started Test Execution : "+ result.getTestClass().getName() + " - " + result.getMethod().getMethodName());
    }
 
