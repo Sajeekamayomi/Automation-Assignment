@@ -5,12 +5,14 @@
 <suite name="QA_Reg_ModuleA_Plan1" parallel="tests" thread-count="2">
 
     ///Testcase Grouping
+    <!--
     <groups>
         <run>
             <include name="smoke"/>
         </run>
     </groups>
-    
+    -->
+
     <listeners>
         <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
         <listener class-name="utility.ChainTestReportListnerManager"/>

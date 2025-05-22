@@ -1,0 +1,22 @@
+2025-05-21 17:27:11 [main] INFO  base.BaseClass - Log File Cleaned : logs/automation.log
+2025-05-21 17:27:18 [TestNG-tests-1] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:27:18 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:27:22 [TestNG-tests-2] INFO  testcases.TC002_LoginUserTest_SuperAdmin - ---------Starting TC001----------
+2025-05-21 17:27:22 [TestNG-tests-1] INFO  testcases.TC001_LoginUserTest_ClientAdmin - ---------Starting TC001----------
+2025-05-21 17:27:35 [TestNG-tests-2] INFO  functions.CommonFunctions - Verify Login Success
+2025-05-21 17:27:37 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success
+2025-05-21 17:27:41 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:27:42 [TestNG-tests-2] INFO  testcases.TC002_LoginUserTest_SuperAdmin - ---------Starting TC001----------
+2025-05-21 17:27:43 [TestNG-tests-1] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:27:48 [TestNG-tests-1] INFO  testcases.TC001_LoginUserTest_ClientAdmin - ---------Starting TC001----------
+2025-05-21 17:27:49 [TestNG-tests-2] INFO  functions.CommonFunctions - Verify Login Success
+2025-05-21 17:27:56 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:27:57 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success
+2025-05-21 17:27:59 [TestNG-tests-2] INFO  testcases.TC002_LoginUserTest_SuperAdmin - ---------Starting TC001----------
+2025-05-21 17:28:04 [TestNG-tests-1] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:28:04 [TestNG-tests-2] INFO  functions.CommonFunctions - Verify Login Success
+2025-05-21 17:28:07 [TestNG-tests-1] INFO  testcases.TC001_LoginUserTest_ClientAdmin - ---------Starting TC001----------
+2025-05-21 17:28:11 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success
+2025-05-21 17:28:12 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
+2025-05-21 17:28:16 [TestNG-tests-2] INFO  testcases.TC003_ViewUserTest - ---------Starting TC002----------
+2025-05-21 17:28:27 [TestNG-tests-2] INFO  testcases.TC003_ViewUserTest - ----------Ending TC002----------
