@@ -21,7 +21,7 @@ Automation_Assignment
 │   │   │   ├── base/              # Base classes (e.g., BaseClass)
 │   │   │   ├── functions/         # Common reusable functions
 │   │   │   ├── pages/             # Page Object Model classes
-│   │   │   └── utility/           # Utilities (DriverFactory, PropertyReader, RetryAnalyzer , ChainTestReportConfiguration)
+│   │   │   └── utility/           # Utilities (DriverFactory, PropertyReader, RetryAnalyzer, ChainTestReportConfiguration)
 │   │   └── resources/             # Main resources (optional)
 │   └── test/
 │       ├── java/
