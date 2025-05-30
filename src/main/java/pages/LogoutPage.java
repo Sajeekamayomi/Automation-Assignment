@@ -22,7 +22,7 @@ public class LogoutPage {
         PageFactory.initElements(driver,this);
     }
 
-    @FindBy(xpath = "//div[@class='MuiBox-root css-oz7qqx']//div[@role='button']")
+    @FindBy(xpath = "//div[@class='MuiBox-root css-3jv294']")
     public WebElement logOutButton;
 
     //Logout from the application

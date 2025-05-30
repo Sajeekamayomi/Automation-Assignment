@@ -1,7 +1,10 @@
 package pages;
 
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,7 +21,14 @@ import java.util.List;
 
 public class SessionHandlingPage {
 
+
+    private static final Logger logger = LogManager.getLogger(SessionHandlingPage.class);
+
+
     WebDriver driver;
+
+    // Use By locator instead of @FindBy to delay locating until needed
+    private final By continueButtonBy = By.xpath("//button[normalize-space()='CONTINUE']");
 
     //constructor
     public SessionHandlingPage(WebDriver driver) {
@@ -26,29 +36,32 @@ public class SessionHandlingPage {
         PageFactory.initElements(driver, this);
     }
 
-    //Locate the element using page factory.
-    @FindBy(name = "continueSession")
-    public WebElement continueButton;
-
-    //By locator used for safe presence check and avoid NoSuchElementException.
-    private final By continueButtonBy = By.name("continueSession");
+//    //Locate the element using page factory.
+//    @FindBy(xpath = "//button[normalize-space()='CONTINUE']")
+//    public WebElement continueButton;
 
 
     //Session handling page - Click the continue button to proceed and terminate any existing sessions.
     public void handleSessionIfPresent() {
-
-        //findElements - check if the button is present
-        List<WebElement> buttons = driver.findElements(continueButtonBy);
-
-        if (!buttons.isEmpty()) {
-            //Wait until the button is clickable.
+        try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-            wait.until(ExpectedConditions.elementToBeClickable(continueButton)).click();
-            System.out.println("Session Conflict Detected - Clicked 'Continue' Button");
-        } else {
-            System.out.println("No Session Conflict");
+
+            // Check if the CONTINUE button appears within 5 seconds
+            WebElement continueButton = wait.until(ExpectedConditions.presenceOfElementLocated(continueButtonBy));
+
+            // Wait for it to be visible and clickable
+            wait.until(ExpectedConditions.visibilityOf(continueButton));
+            wait.until(ExpectedConditions.elementToBeClickable(continueButton));
+
+            continueButton.click();
+
+            logger.info("Session Conflict Detected - Clicked 'Continue' Button");
+
+        } catch (TimeoutException e) {
+            logger.info("No Session Conflict Detected");
+
+        } catch (Exception ex) {
+            logger.error("Error handling session conflict: " + ex.getMessage(), ex);
         }
-
-
     }
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+
+<suite name="QA_Reg_ModuleA_Plan1" parallel="tests" thread-count="1">
+
+    <!--Testcase Grouping-->
+    <!--
+    <groups>
+        <run>
+            <include name="smoke"/>
+        </run>
+    </groups>
+    -->
+
+    <listeners>
+        <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
+        <listener class-name="utility.ChainTestReportListnerManager"/>
+    </listeners>
+
+    <test name="Cucumber Tests">
+        <classes>
+
+            <!-- Executes suite-level setup -->
+            <class name="setup.TestSetup"/>
+
+            <!-- Executes Cucumber feature files -->
+            <class name="runner.TestRunner"/>
+
+
+        </classes>
+
+    </test>
+
+
+</suite>

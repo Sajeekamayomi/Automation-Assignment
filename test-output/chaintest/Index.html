@@ -16,12 +16,12 @@
     <div class="container d-flex justify-content-between">
       <div>
         <a class="navbar-brand" href="#">ChainTest</a>
-        <span class="ms-3 fs-6">SageTest</span>
+        <span class="ms-3 fs-6">WMS_Automation_Assignment</span>
       </div>
       <div>
-        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 1m 16s</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-05-21 05:27:11 PM</span>
-        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-05-21 05:28:27 PM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-hourglass me-1"></i> 1m 34s</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Started 2025-05-30 05:22:18 PM</span>
+        <span class="badge badge-outline text-lg"><i class="bi bi-clock me-1"></i> Ended 2025-05-30 05:23:52 PM</span>
       </div>
       <div>
           <button role="button" id="sys-info" class="btn btn-outline-primary smaller" title="View System Info">
@@ -48,8 +48,8 @@
                 </div>
               </div>
               <div class="card-footer small">
-                <span id="sp1">0</span> Passed,
-                <span id="sf1">1</span> Failed,
+                <span id="sp1">1</span> Passed,
+                <span id="sf1">0</span> Failed,
                 <span id="ss1">0</span> Skipped
               </div>
             </div>
@@ -66,7 +66,7 @@
               </div>
               <div class="card-footer small">
                 <span id="sp2">1</span> Passed,
-                <span id="sf2">2</span> Failed,
+                <span id="sf2">0</span> Failed,
                 <span id="ss2">0</span> Skipped
               </div>
             </div>
@@ -82,8 +82,8 @@
                   </div>
                 </div>
                 <div class="card-footer small">
-                  <span id="sp3">1</span> Passed,
-                  <span id="sf3">6</span> Failed,
+                  <span id="sp3">4</span> Passed,
+                  <span id="sf3">0</span> Failed,
                   <span id="ss3">0</span> Skipped
                 </div>
               </div>
@@ -112,18 +112,11 @@
               </thead>
               <tbody>
                   <tr>
-                    <td><a href="#" class="secondary tag">regression</a></td>
-                    <td>6</td>
+                    <td><a href="#" class="secondary tag">cucumber</a></td>
+                    <td>4</td>
+                    <td>4</td>
                     <td>0</td>
-                    <td>6</td>
-                    <td>1m 3s</td>
-                  </tr>
-                  <tr>
-                    <td><a href="#" class="secondary tag">smoke</a></td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>0</td>
-                    <td>10s</td>
+                    <td>1m 17s</td>
                   </tr>
               </tbody>
             </table>
@@ -147,530 +140,37 @@
         </div>
       </div>
     </div>
-      <div class="test-container failed">
+      <div class="test-container passed">
         <div class="container">
           <div class="row">
             <div class="col-4">
-              <h6 class="mb-3 testname fs-6 failed">QA_Reg_ModuleA_Plan1</h6>
+              <h6 class="mb-3 testname fs-6 passed">QA_Reg_ModuleA_Plan1</h6>
               <div class="small">
-                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 1m 16s</span>
+                <span class="badge badge-outline"><i class="bi bi-hourglass me-1"></i> 1m 33s</span>
                 <span class="badge text-bg-info"><i class="bi bi-clock me-1"></i>
-                  2025-05-21 05:27:11 PM</span>
+                  2025-05-30 05:22:18 PM</span>
                 <span class="badge text-bg-warning"><i class="bi bi-clock me-1"></i>
-                  2025-05-21 05:28:27 PM</span>
+                  2025-05-30 05:23:52 PM</span>
               </div>
                 <div class="my-2">
-                    <span class="badge rounded-pill text-bg-secondary">regression</span>
-                    <span class="badge rounded-pill text-bg-secondary">smoke</span>
+                    <span class="badge rounded-pill text-bg-secondary">cucumber</span>
                 </div>
               
             </div>
             <div class="col-8">
-                <div class="card mb-2 result failed">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-                        <span class="fs-6 ms-2">testcases.TC001_LoginUserTest_ClientAdmin</span>
-                      </div>
-                      <div>
-                          <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">regression</span>
-                          </span>
-                          <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">1m 4s</span>
-                      </div>
-                    </div>
-                    
-  <div class="mt-3 border-top">
-    <div class="leaf failed pb-1">
-      <div class="d-flex justify-content-between mt-3">
-        <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-          <span class="fs-6 ms-2">LoginUserTest</span>
-        </div>
-        <div>
-            <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">regression</span>
-            </span>
-            <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">14s</span>
-        </div>
-      </div>
-      <p class="desc"></p>
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC001_LoginUserTest_ClientAdmin.LoginUserTest(TC001_LoginUserTest_ClientAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-        <div class="mt-3">
-          <pre class="pb-0">
-Started Test Execution : testcases.TC001_LoginUserTest_ClientAdmin - LoginUserTest
-LoginUserTest : Testcase Skipped
-          </pre>
-        </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/4b813e37-15d1-45de-aa25-f04670c34941.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/a848fc54-97cc-4127-baa0-a964217748ed.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/be1e323f-322c-43f5-aaca-20fe60c4a910.png" />
-            </div>
-        </div>
-    </div>
-    <div class="leaf failed pb-1">
-      <div class="d-flex justify-content-between mt-3">
-        <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-          <span class="fs-6 ms-2">LoginUserTest</span>
-        </div>
-        <div>
-            <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">regression</span>
-            </span>
-            <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">11s</span>
-        </div>
-      </div>
-      <p class="desc"></p>
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC001_LoginUserTest_ClientAdmin.LoginUserTest(TC001_LoginUserTest_ClientAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-        <div class="mt-3">
-          <pre class="pb-0">
-Started Test Execution : testcases.TC001_LoginUserTest_ClientAdmin - LoginUserTest
-LoginUserTest : Testcase Skipped
-          </pre>
-        </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/a4637700-d827-4c49-93d0-b066c634f1ce.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/9d67579f-8503-4a10-8d29-eb1d71b3067b.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/5abd11fb-85cc-4dfb-8a28-3635395257ed.png" />
-            </div>
-        </div>
-    </div>
-    <div class="leaf failed pb-1">
-      <div class="d-flex justify-content-between mt-3">
-        <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-          <span class="fs-6 ms-2">LoginUserTest</span>
-        </div>
-        <div>
-            <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">regression</span>
-            </span>
-            <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">7s</span>
-        </div>
-      </div>
-      <p class="desc"></p>
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC001_LoginUserTest_ClientAdmin.LoginUserTest(TC001_LoginUserTest_ClientAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-        <div class="mt-3">
-          <pre class="pb-0">
-Started Test Execution : testcases.TC001_LoginUserTest_ClientAdmin - LoginUserTest
-LoginUserTest - Testcase Failed
-          </pre>
-        </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/708a7b44-f4c5-4e59-9495-339ea4f49b84.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/dcd0b00c-8251-4347-a634-684097bb7bd4.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/4f62535e-066d-41ca-9747-16829e9c0f06.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/cc1e1f7f-432c-441d-827d-fd6552c33669.png" />
-            </div>
-        </div>
-    </div>
-  </div>
-
-                  </div>
-                </div>
-                <div class="card mb-2 result failed">
-                  <div class="card-body">
-                    <div class="d-flex justify-content-between">
-                      <div>
-                            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-                        <span class="fs-6 ms-2">testcases.TC002_LoginUserTest_SuperAdmin</span>
-                      </div>
-                      <div>
-                          <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">regression</span>
-                          </span>
-                          <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">56s</span>
-                      </div>
-                    </div>
-                    
-  <div class="mt-3 border-top">
-    <div class="leaf failed pb-1">
-      <div class="d-flex justify-content-between mt-3">
-        <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-          <span class="fs-6 ms-2">LoginUserTest</span>
-        </div>
-        <div>
-            <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">regression</span>
-            </span>
-            <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">13s</span>
-        </div>
-      </div>
-      <p class="desc"></p>
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC002_LoginUserTest_SuperAdmin.LoginUserTest(TC002_LoginUserTest_SuperAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-        <div class="mt-3">
-          <pre class="pb-0">
-Started Test Execution : testcases.TC002_LoginUserTest_SuperAdmin - LoginUserTest
-LoginUserTest : Testcase Skipped
-          </pre>
-        </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/a3d0594d-841b-4a53-b57c-d3b86790a278.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/41fb8471-a57b-44ff-a634-8044323dc48b.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/8408285f-32f4-4791-afa2-4f4fc4934fe0.png" />
-            </div>
-        </div>
-    </div>
-    <div class="leaf failed pb-1">
-      <div class="d-flex justify-content-between mt-3">
-        <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-          <span class="fs-6 ms-2">LoginUserTest</span>
-        </div>
-        <div>
-            <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">regression</span>
-            </span>
-            <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">8s</span>
-        </div>
-      </div>
-      <p class="desc"></p>
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC002_LoginUserTest_SuperAdmin.LoginUserTest(TC002_LoginUserTest_SuperAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-        <div class="mt-3">
-          <pre class="pb-0">
-Started Test Execution : testcases.TC002_LoginUserTest_SuperAdmin - LoginUserTest
-LoginUserTest : Testcase Skipped
-          </pre>
-        </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/7c34fe70-b324-4b82-8852-6cbac0f1ec4a.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/7115db90-cfd3-462f-9279-2d8e1a7756f7.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/a7a83039-d041-42cb-b79b-0426fb3d81d8.png" />
-            </div>
-        </div>
-    </div>
-    <div class="leaf failed pb-1">
-      <div class="d-flex justify-content-between mt-3">
-        <div>
-            <i class="bi bi-exclamation-octagon-fill text-danger"></i>
-          <span class="fs-6 ms-2">LoginUserTest</span>
-        </div>
-        <div>
-            <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">regression</span>
-            </span>
-            <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">7s</span>
-        </div>
-      </div>
-      <p class="desc"></p>
-        <pre class="py-2 mt-2 mb-4">java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC002_LoginUserTest_SuperAdmin.LoginUserTest(TC002_LoginUserTest_SuperAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-        <div class="mt-3">
-          <pre class="pb-0">
-Started Test Execution : testcases.TC002_LoginUserTest_SuperAdmin - LoginUserTest
-LoginUserTest - Testcase Failed
-          </pre>
-        </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/16ba3ef7-1bf1-45df-ba68-6f084bfc80b0.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/cd8ded1d-5d4d-4bab-b367-57145dd1c9d2.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/b8c36261-c73a-417e-9364-43c46a4731dd.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/a859d6b7-14ce-4798-a025-448bd50a7433.png" />
-            </div>
-        </div>
-    </div>
-  </div>
-
-                  </div>
-                </div>
                 <div class="card mb-2 result passed">
                   <div class="card-body">
                     <div class="d-flex justify-content-between">
                       <div>
                           <i class="bi bi-check-circle-fill text-success"></i>
-                        <span class="fs-6 ms-2">testcases.TC003_ViewUserTest</span>
+                        <span class="fs-6 ms-2">runner.TestRunner</span>
                       </div>
                       <div>
                           <span class="tag-list">
-                              <span class="badge rounded-pill text-bg-secondary">smoke</span>
+                              <span class="badge rounded-pill text-bg-secondary">cucumber</span>
                           </span>
                           <span class="mx-1">&middot;</span>
-                        <span class="badge text-dark bg-light">19s</span>
+                        <span class="badge text-dark bg-light">1m 33s</span>
                       </div>
                     </div>
                     
@@ -679,33 +179,86 @@ LoginUserTest - Testcase Failed
       <div class="d-flex justify-content-between mt-3">
         <div>
             <i class="bi bi-check-circle-fill text-success"></i>
-          <span class="fs-6 ms-2">viewUserTest</span>
+          <span class="fs-6 ms-2">runScenario</span>
         </div>
         <div>
             <span class="tag-list">
-                <span class="badge rounded-pill text-bg-secondary">smoke</span>
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
             </span>
             <span class="mx-1">&middot;</span>
-          <span class="badge text-dark bg-light">10s</span>
+          <span class="badge text-dark bg-light">29s</span>
         </div>
       </div>
-      <p class="desc"></p>
+      <p class="desc">Runs Cucumber Scenarios<br>["View a user", "View user in User Management"]</p>
         <div class="mt-3">
           <pre class="pb-0">
-Started Test Execution : testcases.TC003_ViewUserTest - viewUserTest
-viewUserTest : Testcase Passed
+View a user : Testcase Passed
           </pre>
         </div>
-        <div class="row mt-3">
-            <div class="embed col-2 mb-1">
-              <img src="resources/16638771-0245-4175-9c03-c07881e15188.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/7ed7d396-a6fc-4468-b817-3e5b71a12c73.png" />
-            </div>
-            <div class="embed col-2 mb-1">
-              <img src="resources/cf97bad7-5bd3-40fb-9ee2-de392235055a.png" />
-            </div>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">25s</span>
+        </div>
+      </div>
+      <p class="desc">Runs Cucumber Scenarios<br>["Successfully add a new user by Super Admin", "Add New User in User Management by Super Admin"]</p>
+        <div class="mt-3">
+          <pre class="pb-0">
+Started Test Execution : Successfully add a new user by Super Admin
+Successfully add a new user by Super Admin : Testcase Passed
+          </pre>
+        </div>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">21s</span>
+        </div>
+      </div>
+      <p class="desc">Runs Cucumber Scenarios<br>["Successfully suspend an active user", "Suspend User in User Management"]</p>
+        <div class="mt-3">
+          <pre class="pb-0">
+Started Test Execution : Successfully suspend an active user
+Successfully suspend an active user : Testcase Passed
+          </pre>
+        </div>
+    </div>
+    <div class="leaf passed pb-1">
+      <div class="d-flex justify-content-between mt-3">
+        <div>
+            <i class="bi bi-check-circle-fill text-success"></i>
+          <span class="fs-6 ms-2">runScenario</span>
+        </div>
+        <div>
+            <span class="tag-list">
+                <span class="badge rounded-pill text-bg-secondary">cucumber</span>
+            </span>
+            <span class="mx-1">&middot;</span>
+          <span class="badge text-dark bg-light">0ms</span>
+        </div>
+      </div>
+      <p class="desc">Runs Cucumber Scenarios<br>["Successfully update the user by Client Admin", "Update User in User Management by Client Admin"]</p>
+        <div class="mt-3">
+          <pre class="pb-0">
+Started Test Execution : Successfully update the user by Client Admin
+          </pre>
         </div>
     </div>
   </div>
@@ -720,22 +273,22 @@ viewUserTest : Testcase Passed
   </div>
 
   <script>
-    const stats1Annotation = {'total': 1, 'passed': 0};
+    const stats1Annotation = {'total': 1, 'passed': 1};
     const stats1 = [
-      { result: 'Passed', count: 0, bg: 'rgb(140, 197, 83)' },
-      { result: 'Failed', count: 1, bg: 'rgb(233,80,113)' },
+      { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
+      { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
       { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
     ];
-      const stats2Annotation = {'total': 3, 'passed': 1};
+      const stats2Annotation = {'total': 1, 'passed': 1};
       const stats2 = [
         { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 2, bg: 'rgb(233,80,113)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
-      const stats3Annotation = {'total': 7, 'passed': 1};
+      const stats3Annotation = {'total': 4, 'passed': 4};
       const stats3 = [
-        { result: 'Passed', count: 1, bg: 'rgb(140, 197, 83)' },
-        { result: 'Failed', count: 6, bg: 'rgb(233,80,113)' },
+        { result: 'Passed', count: 4, bg: 'rgb(140, 197, 83)' },
+        { result: 'Failed', count: 0, bg: 'rgb(233,80,113)' },
         { result: 'Skipped', count: 0, bg: 'rgb(221, 91, 96)' }
       ];
      
@@ -808,24 +361,24 @@ viewUserTest : Testcase Passed
           <table class="table">
             <tbody>
                 <tr>
-                  <td>esc</td>
-                  <td>Reset all filters</td>
-                </tr>
-                <tr>
-                  <td>f</td>
-                  <td>Toggle failed tests</td>
-                </tr>
-                <tr>
-                  <td>p</td>
-                  <td>Toggle passed tests</td>
+                  <td>L</td>
+                  <td>Toggle theme (light/dark)</td>
                 </tr>
                 <tr>
                   <td>s</td>
                   <td>Toggle skipped tests</td>
                 </tr>
                 <tr>
-                  <td>L</td>
-                  <td>Toggle theme (light/dark)</td>
+                  <td>p</td>
+                  <td>Toggle passed tests</td>
+                </tr>
+                <tr>
+                  <td>f</td>
+                  <td>Toggle failed tests</td>
+                </tr>
+                <tr>
+                  <td>esc</td>
+                  <td>Reset all filters</td>
                 </tr>
             </tbody>
           </table>

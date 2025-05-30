@@ -30,8 +30,8 @@
                 <table style="padding: 20px;">
                   <tr>
                     <td>
-                      <span class="bg-failed" style="margin-right:10px;padding:0px 5px;">FAILED</span>
-                      <span style="">May 21, 2025, 5:27:11 PM &middot; 1m 16s</span>
+                      <span class="bg-passed" style="margin-right:10px;padding:0px 5px;">PASSED</span>
+                      <span style="">May 30, 2025, 5:22:18 PM &middot; 1m 34s</span>
                     </td>
                   </tr>
                 </table>
@@ -52,15 +52,15 @@
 	            <tr>
 	              <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;">Tests</p>
-	                <h1 style="font-size:34px;">7</h1>
+	                <h1 style="font-size:34px;">4</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#79B530">Passed</p>
-	                <h1 style="font-size:34px;">1</h1>
+	                <h1 style="font-size:34px;">4</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e64b5d">Failed</p>
-	                <h1 style="font-size:34px;">6</h1>
+	                <h1 style="font-size:34px;">0</h1>
 	              </td>
                 <td width="100" style="padding:30px 40px 20px;">
 	                <p style="font-weight:500;color:#7E7E7E;margin:0;color:#e6e04c">Skipped</p>
@@ -95,19 +95,9 @@
                   </tr>
                   <tr style="height:10px;"></tr>
                   <tr>
-                    <td width="350">regression</td>
+                    <td width="350">cucumber</td>
                       <td width="23"></td>
-                      <td style="" width="60">0</td>
-                      <td class="padding" width="10"></td>
-                      <td style="" width="60">6</td>
-                      <td class="padding" width="10"></td>
-                      <td style="" width="60">0</td>
-                  </tr>
-                  <tr style="height:10px;"></tr>
-                  <tr>
-                    <td width="350">smoke</td>
-                      <td width="23"></td>
-                      <td style="" width="60">1</td>
+                      <td style="" width="60">4</td>
                       <td class="padding" width="10"></td>
                       <td style="" width="60">0</td>
                       <td class="padding" width="10"></td>
@@ -125,342 +115,6 @@
     <table width="100%">
       <tr>
         <td align="center">
-          <table width="650">
-            <tr>
-              <td bgcolor="#FFF" style="padding:10px 20px;">
-                <table>
-                  <tr>
-                    <td width="650px" style="padding:10px;">
-                      <p class="text-failed" style="font-size:14px;font-weight:500;margin:0;margin-bottom:5px;">
-                        QA_Reg_ModuleA_Plan1
-                      <p style="font-size:12px;margin:0;">
-                        <span>May 21, 2025, 5:27:11 PM / 1m 16s</span>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
-                      <p style="font-size:13px;margin:0;">
-                        testcases.TC001_LoginUserTest_ClientAdmin
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        LoginUserTest
-<pre>java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC001_LoginUserTest_ClientAdmin.LoginUserTest(TC001_LoginUserTest_ClientAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        LoginUserTest
-<pre>java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC001_LoginUserTest_ClientAdmin.LoginUserTest(TC001_LoginUserTest_ClientAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        LoginUserTest
-<pre>java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC001_LoginUserTest_ClientAdmin.LoginUserTest(TC001_LoginUserTest_ClientAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr><td style="height:10px"></td></tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 10px;">
-                      <p style="font-size:13px;margin:0;">
-                        testcases.TC002_LoginUserTest_SuperAdmin
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        LoginUserTest
-<pre>java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC002_LoginUserTest_SuperAdmin.LoginUserTest(TC002_LoginUserTest_SuperAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        LoginUserTest
-<pre>java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC002_LoginUserTest_SuperAdmin.LoginUserTest(TC002_LoginUserTest_SuperAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-failed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        LoginUserTest
-<pre>java.lang.AssertionError: Login Failed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at functions.CommonFunctions.verifyLoginSuccess(CommonFunctions.java:46)
-	at testcases.TC002_LoginUserTest_SuperAdmin.LoginUserTest(TC002_LoginUserTest_SuperAdmin.java:38)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:317)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java)
-	at --- Async.Stack.Trace --- (captured by IntelliJ IDEA debugger)
-	at java.base/java.util.concurrent.FutureTask.<init>(FutureTask.java:132)
-	at java.base/java.util.concurrent.AbstractExecutorService.newTaskFor(AbstractExecutorService.java:113)
-	at java.base/java.util.concurrent.AbstractExecutorService.invokeAll(AbstractExecutorService.java:305)
-	at org.testng.internal.thread.ThreadUtil.execute(ThreadUtil.java:70)
-	at org.testng.SuiteRunner.runInParallelTestMode(SuiteRunner.java:442)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)
-	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
-</pre>
-                      </p>
-                    </td>
-                  </tr>
-                  <tr><td style="height:10px"></td></tr>
-                  <tr>
-                    <td width="650px" class="bg-passed" style="padding:7px 10px;">
-                      <p style="font-size:13px;margin:0;">
-                        testcases.TC003_ViewUserTest
-                      </p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td width="650px" class="bg-passed" style="padding:7px 20px;">
-                      <p style="font-size:13px;margin:0;">
-                        viewUserTest
-                      </p>
-                    </td>
-                  </tr>
-                  <tr><td style="height:10px"></td></tr>
-                </table>
-              </td>
-            </tr>
-          </table>
         </td>
       </tr>
     </table>

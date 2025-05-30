@@ -1,22 +1,23 @@
-2025-05-21 17:27:11 [main] INFO  base.BaseClass - Log File Cleaned : logs/automation.log
-2025-05-21 17:27:18 [TestNG-tests-1] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:27:18 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:27:22 [TestNG-tests-2] INFO  testcases.TC002_LoginUserTest_SuperAdmin - ---------Starting TC001----------
-2025-05-21 17:27:22 [TestNG-tests-1] INFO  testcases.TC001_LoginUserTest_ClientAdmin - ---------Starting TC001----------
-2025-05-21 17:27:35 [TestNG-tests-2] INFO  functions.CommonFunctions - Verify Login Success
-2025-05-21 17:27:37 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success
-2025-05-21 17:27:41 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:27:42 [TestNG-tests-2] INFO  testcases.TC002_LoginUserTest_SuperAdmin - ---------Starting TC001----------
-2025-05-21 17:27:43 [TestNG-tests-1] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:27:48 [TestNG-tests-1] INFO  testcases.TC001_LoginUserTest_ClientAdmin - ---------Starting TC001----------
-2025-05-21 17:27:49 [TestNG-tests-2] INFO  functions.CommonFunctions - Verify Login Success
-2025-05-21 17:27:56 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:27:57 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success
-2025-05-21 17:27:59 [TestNG-tests-2] INFO  testcases.TC002_LoginUserTest_SuperAdmin - ---------Starting TC001----------
-2025-05-21 17:28:04 [TestNG-tests-1] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:28:04 [TestNG-tests-2] INFO  functions.CommonFunctions - Verify Login Success
-2025-05-21 17:28:07 [TestNG-tests-1] INFO  testcases.TC001_LoginUserTest_ClientAdmin - ---------Starting TC001----------
-2025-05-21 17:28:11 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success
-2025-05-21 17:28:12 [TestNG-tests-2] INFO  base.BaseClass - Test case Automating with : chrome
-2025-05-21 17:28:16 [TestNG-tests-2] INFO  testcases.TC003_ViewUserTest - ---------Starting TC002----------
-2025-05-21 17:28:27 [TestNG-tests-2] INFO  testcases.TC003_ViewUserTest - ----------Ending TC002----------
+2025-05-30 17:22:18 [main] INFO  base.BaseClass - Log File Cleaned : logs/automation.log
+2025-05-30 17:22:19 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Starting Scenario: View a user-----------
+2025-05-30 17:22:35 [TestNG-tests-1] INFO  pages.SessionHandlingPage - No Session Conflict Detected
+2025-05-30 17:22:35 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success for role :null
+2025-05-30 17:22:35 [TestNG-tests-1] INFO  functions.CommonFunctions - Page Title After Login for role null : Warehouse Management System
+2025-05-30 17:22:48 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Ending Scenario: View a user -----------
+2025-05-30 17:22:48 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Starting Scenario: Successfully add a new user by Super Admin-----------
+2025-05-30 17:23:03 [TestNG-tests-1] INFO  pages.SessionHandlingPage - No Session Conflict Detected
+2025-05-30 17:23:03 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success for role :null
+2025-05-30 17:23:03 [TestNG-tests-1] INFO  functions.CommonFunctions - Page Title After Login for role null : Warehouse Management System
+2025-05-30 17:23:14 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Ending Scenario: Successfully add a new user by Super Admin -----------
+2025-05-30 17:23:14 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Starting Scenario: Successfully suspend an active user-----------
+2025-05-30 17:23:29 [TestNG-tests-1] INFO  pages.SessionHandlingPage - No Session Conflict Detected
+2025-05-30 17:23:29 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success for role :null
+2025-05-30 17:23:29 [TestNG-tests-1] INFO  functions.CommonFunctions - Page Title After Login for role null : Warehouse Management System
+2025-05-30 17:23:35 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Ending Scenario: Successfully suspend an active user -----------
+2025-05-30 17:23:36 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Starting Scenario: Successfully update the user by Client Admin-----------
+2025-05-30 17:23:50 [TestNG-tests-1] INFO  pages.SessionHandlingPage - No Session Conflict Detected
+2025-05-30 17:23:50 [TestNG-tests-1] INFO  functions.CommonFunctions - Verify Login Success for role :null
+2025-05-30 17:23:50 [TestNG-tests-1] INFO  functions.CommonFunctions - Page Title After Login for role null : Warehouse Management System
+2025-05-30 17:23:51 [TestNG-tests-1] INFO  stepdefinitions.Hooks - Ending Scenario: Successfully update the user by Client Admin -----------
+2025-05-30 18:07:33 [main] INFO  stepdefinitions.Hooks - Starting Scenario: View a user-----------
+2025-05-30 18:08:31 [main] INFO  stepdefinitions.Hooks - Ending Scenario: View a user -----------

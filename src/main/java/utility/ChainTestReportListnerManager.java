@@ -17,27 +17,43 @@ import java.lang.reflect.Method;
 
 public class ChainTestReportListnerManager extends BaseClass implements ITestListener, IAnnotationTransformer {
 
-    @Override
-    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-        annotation.setRetryAnalyzer(RetryAnalyzer.class);
+//    @Override
+//    public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
+//        annotation.setRetryAnalyzer(RetryAnalyzer.class);
+//    }
+
+    // Get actual scenario name
+    private String getScenarioName(ITestResult result) {
+        Object[] parameters = result.getParameters();
+        if (parameters != null && parameters.length > 0) {
+            Object param = parameters[0];
+            if (param instanceof io.cucumber.testng.PickleWrapper) {
+                return ((io.cucumber.testng.PickleWrapper) param).getPickle().getName();
+            }
+        }
+        return result.getMethod().getMethodName();
     }
 
-    public void onTestStart(ITestResult result){
-       ChainTestListener.log("Started Test Execution : "+ result.getTestClass().getName() + " - " + result.getMethod().getMethodName());
-   }
+    @Override
+    public void onTestStart(ITestResult result) {
+        ChainTestListener.log("Started Test Execution : " + getScenarioName(result));
+    }
 
-   public void onTestSuccess (ITestResult result){
-       ChainTestListener.log(result.getName() + " : Testcase Passed");
-   }
+    @Override
+    public void onTestSuccess(ITestResult result) {
+        ChainTestListener.log(getScenarioName(result) + " : Testcase Passed");
+    }
 
-   public void onTestFailure(ITestResult result){
-       ChainTestListener.log(result.getName() + " - Testcase Failed");
-       ChainTestListener.embed(takeScreenshot(),"image/png");
-   }
+    @Override
+    public void onTestFailure(ITestResult result) {
+        ChainTestListener.log(getScenarioName(result) + " - Testcase Failed");
+        ChainTestListener.embed(takeScreenshot(), "image/png");
+    }
 
-   public void onTestSkipped(ITestResult result){
-       ChainTestListener.log(result.getName()  + " : Testcase Skipped");
-   }
+    @Override
+    public void onTestSkipped(ITestResult result) {
+        ChainTestListener.log(getScenarioName(result) + " : Testcase Skipped");
+    }
 
 
 }

@@ -1,7 +1,6 @@
 package pages;
 
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,15 +20,9 @@ public class LandingPage {
         PageFactory.initElements(driver, this);
     }
 
-    //------------Locate the elements-------------
-
-    @FindBy(xpath = "//h6[contains(text(), 'Knocen Knowledge Management System')]")
-    public WebElement subTitle;
-
-
-    //Verify the login success
-    public String loginSuccess() {
-        return subTitle.getText();
+    //Return page title after login
+    public String getPageTitle (){
+        return driver.getTitle();
     }
 
 
