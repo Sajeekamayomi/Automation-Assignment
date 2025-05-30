@@ -36,8 +36,11 @@ public class ChainTestReportListnerManager extends BaseClass implements ITestLis
 
     @Override
     public void onTestStart(ITestResult result) {
-        ChainTestListener.log("Started Test Execution : " + getScenarioName(result));
+        String scenarioName = getScenarioName(result);
+        result.setAttribute("name", scenarioName);
+        ChainTestListener.log("Started Test Execution : " + scenarioName);
     }
+
 
     @Override
     public void onTestSuccess(ITestResult result) {

@@ -86,6 +86,8 @@ public class UserManagementPage {
     //Click user management navigation button
     public void clickUserManagementNavigationButton() {
         userManagementNavigationButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(addNewUserButton));
     }
 
     //Search using username
@@ -284,7 +286,7 @@ public class UserManagementPage {
 
 
     public void clickEditButton() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.elementToBeClickable(editBtn)).click();
     }
 

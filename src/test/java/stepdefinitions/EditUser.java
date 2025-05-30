@@ -21,7 +21,7 @@ public class EditUser {
         UserManagementPage userManagementPage = new UserManagementPage(DriverFactory.getDriver());
 
         userManagementPage.clickUserManagementNavigationButton();
-        userManagementPage.clickAddNewUserButton();
+        //userManagementPage.clickAddNewUserButton();
         userManagementPage.searchUserByUsername("sajeeka@wms.app");
     }
 
